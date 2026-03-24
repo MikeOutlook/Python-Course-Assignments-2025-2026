@@ -1,0 +1,19 @@
+import itertools
+
+name=input("请输入英文姓名（4-12个字符）").strip()
+cycle_name=itertools.cycle(name)
+
+rows=[]
+for y in range(15,-15,-1):
+    row=[]
+    for x in range(-30,30):
+        if((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3<=0:
+            row.append(next(cycle_name))
+        else:
+            row.append(" ")
+
+    rows.append("".join(row))
+
+print("\n".join(rows))
+
+

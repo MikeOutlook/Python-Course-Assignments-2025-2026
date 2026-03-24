@@ -1,0 +1,5 @@
+name=input("请输入患者的姓名：")
+age=input("请输入患者的年龄：")
+gender=input("请输入患者的性别：")
+#print("你输入的患者信息是：",name,age,"岁",gender)
+print("你输入的患者信息是：" + name + " " + age + "岁" + " " + gender)

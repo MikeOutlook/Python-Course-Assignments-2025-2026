@@ -1,0 +1,1 @@
+import pandas as pd# 导入pandas，将本行代码补充完整DF1 =pd.read_csv("Diabetes.csv",index_col=0)   # 读取数据文件，将本行代码补充完整DF1.eval("Glucose=Glucose/18",inplace=True)  # 使用eval函数进行计算，将本行代码补充完整DF1["BSA"]=((DF1["Height"]*DF1["Weight"]/3600)**0.5).round(2)   # 添加新列，使用列索引进行简单计算，将本行代码补充完整print(DF1)

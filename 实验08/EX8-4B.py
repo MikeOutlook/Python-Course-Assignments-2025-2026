@@ -1,0 +1,22 @@
+# 步骤1：导入需要的库
+import pandas as pd  #导入pandas，将本行代码补充完整
+import matplotlib.pyplot as plt   #导入绘图库，将本行代码补充完整
+# 步骤2：全局设置
+
+#中文显示设置，将本行代码补充完整
+plt.rcParams["font.family"] = ["SimHei"]
+
+# 步骤3：数据准备
+datas = pd.read_csv("AIDS_data.csv",encoding="GBK") #读取数据文件到datas数据框
+y1 =datas["发病数"].values #取出"发病数"列数据，将本行代码补充完整
+y2 =datas["既往感染者转为病人"].values #取出"既往感染者转为病人"列数据，将本行代码补充完整
+y3 =datas["死亡数"].values #取出"死亡数"列数据，将本行代码补充完整
+x =list(range(6)) #产生横坐标数据，将本行代码补充完整
+#5、调用函数绘图
+plt.figure(figsize=(9,7))
+plt.plot(x,y1,"r-s") #绘制第1条线，将本行代码补充完整
+plt.plot(x,y2,"b-o") #绘制第2条线，将本行代码补充完整
+plt.plot(x,y3,"m:D") #绘制第3条线，将本行代码补充完整
+#7、图形展示
+
+plt.show()

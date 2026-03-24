@@ -1,0 +1,9 @@
+info="患者男性，52岁，诊断为糖尿病"
+print(info)
+sex=info[2]
+age=info[5:7]
+diag=info[-3:]
+print("性别",sex)
+print("年龄",age)
+print("诊断",diag)
+print("本病例为{}岁的{}性{}患者".format(age,sex,diag))
