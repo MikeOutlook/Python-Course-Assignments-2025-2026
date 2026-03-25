@@ -1,8 +1,18 @@
+import os
 import pandas as pd
 #下行代码为东亚文字显示对齐设置
 pd.set_option("display.unicode.east_asian_width", True) 
 
-DF_score = pd.read_csv("score.csv",index_col=0) # (1) 读取数据文件
+##1. 定位当前脚本所在文件夹 (e.g., 实验07)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+## 2. 定位项目根目录 (向上跳一级)
+project_root = os.path.dirname(current_dir)
+
+## 3. 构建输入与输出的完整路径
+birthwt = os.path.join(project_root, "data_input", "score.csv")
+
+DF_score = pd.read_csv(birthwt,index_col=0) # (1) 读取数据文件
 print("原始数据：\n",DF_score)
 
 DF_score.drop(index="赵云",inplace=True) #删除某行数据，将本行代码补充完整

@@ -1,5 +1,5 @@
 #
-#我的学号：郑子恒
+#我的学号：MikeOutlook
 #我的姓名：2023220986
 import numpy as np
 arr1 =np.arange(10,1200,7)   # 1.创建第1个数组,将本行代码补充完整

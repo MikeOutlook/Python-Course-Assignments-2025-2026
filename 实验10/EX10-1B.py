@@ -1,4 +1,5 @@
 # 导入模块，将后续代码补充完整
+import os
 import pandas as pd
 import matplotlib.pylab as plt
 from sklearn import linear_model
@@ -6,7 +7,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error,r2_score
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 # 加载数据，文件类型为CSV
-data =pd.read_csv("brain_weight_new.csv") #读取数据文件，讲本行代码补充完整
+
+
+# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. 定位项目根目录 (向上跳一级)
+project_root = os.path.dirname(current_dir)
+
+# 3. 构建输入与输出的完整路径
+input_file = os.path.join(project_root, "data_input", "brain_weight_new.csv")
+
+data =pd.read_csv(input_file) #读取数据文件，讲本行代码补充完整
 print(data)  #非必须代码，观察数据结构
 #读取样本（自变量）和标签（因变量），将后续代码补充完整
 x=data["Head_Size"].values.reshape(-1,1)

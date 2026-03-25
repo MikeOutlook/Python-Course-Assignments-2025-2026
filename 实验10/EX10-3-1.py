@@ -1,10 +1,24 @@
 ##、导入需要的库，将后续代码补充完整（不止一行）
+import os
 import matplotlib.pyplot as plt
 import pandas as pd
 plt.rcParams["font.family"] = ["SimHei"] # 中文显示设置，将本行代码补充完整
 ##、获取数据
-DF1 =pd.read_excel("Census.xlsx","book1",index_col=0,engine='openpyxl')   # 读取数据文件中的book工作表到DF1，将本行代码补充完整
-DF2 =pd.read_excel("Census.xlsx","education",index_col=0,engine='openpyxl')   # 读取数据文件中的education工作表到DF2，将本行代码补充完整
+
+
+# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. 定位项目根目录 (向上跳一级)
+project_root = os.path.dirname(current_dir)
+
+# 3. 构建输入与输出的完整路径
+input_file = os.path.join(project_root, "data_input", "Census.xlsx")
+
+
+DF1 =pd.read_excel(input_file,"book1",index_col=0)   # 读取数据文件中的book工作表到DF1，将本行代码补充完整
+DF2 =pd.read_excel(input_file,"education",index_col=0)   # 读取数据文件中的education工作表到DF2，将本行代码补充完整
+
 y1 =DF1["illiterate"]/DF1["Population"]*100   # 计算文盲率，将本行代码补充完整
 y2 =DF2["college"]/100000*100   # 取出各次普查大专人口数，折算为百分比，将本行代码补充完整
 y3 =DF2["senior"]/100000*100   # 计算各次普查高中人口数，折算为百分比，将本行代码补充完整

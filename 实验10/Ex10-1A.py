@@ -1,11 +1,22 @@
 # 导入模块
+import os
 import pandas as pd
 import matplotlib.pylab as plt
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 # 加载数据， 文件类型为 xls；
-data = pd.read_excel("time_cholesterol.xls")
+
+# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. 定位项目根目录 (向上跳一级)
+project_root = os.path.dirname(current_dir)
+
+# 3. 构建输入与输出的完整路径
+input_file = os.path.join(project_root, "data_input", "time_cholesterol.xls")
+
+data = pd.read_excel(input_file)
 print(data) #非必须代码， 观察数据结构
 #读取样本（自变量） 和标签（因变量）
 x=data["time"].values.reshape(-1,1)
