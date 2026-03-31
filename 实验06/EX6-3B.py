@@ -1,25 +1,25 @@
 import numpy as np
 import os
 
-# 读取CSV文件(因为要上传github，所以使用相对路径)
+# Read CSV file (using relative path for github upload)
 
-# 1. 获取当前脚本 (Ex6-3B.py) 所在的文件夹
+# 1. Get the directory where current script (Ex6-3B.py) is located
 current_script_dir = os.path.dirname(__file__)
 
-# 2. 获取该文件夹的上一级目录：即项目根目录 Python-Course-Assignments-2025-2026
+# 2. Get the parent directory of that folder: Project root Python-Course-Assignments-2025-2026
 project_root = os.path.abspath(os.path.join(current_script_dir, ".."))
 
-# 3. 拼接出 data_input 文件夹下 data.csv 的完整路径
+# 3. Construct the full path to patient_temperatures.csv in data_input folder
 file_path = os.path.join(project_root, "data_input", "patient_temperatures.csv")
 
-# 4. 打印一下路径，方便你调试检查
-print(f"正在读取文件: {file_path}")
+# 4. Print the path for debugging
+print(f"Reading file: {file_path}")
 
 
 data =np.loadtxt(file_path,
                  dtype=float,
                  delimiter=",",
-                 skiprows=1)  # 将本行代码补充完整
+                 skiprows=1)  # Complete this line
 
 print(data)
 

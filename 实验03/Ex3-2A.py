@@ -1,7 +1,7 @@
-#高血压判断
-SBP = int(input("请输入收缩压"))
-DBP = int(input("请输入舒张压"))
+# Hypertension diagnosis
+SBP = int(input("Enter systolic blood pressure: "))
+DBP = int(input("Enter diastolic blood pressure: "))
 if (SBP >= 140) or (DBP >= 90):
-    print("患者为高血压")
+    print("Patient has hypertension")
 else:
-    print("患者不是高血压")
+    print("Patient does not have hypertension")

@@ -3,23 +3,23 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+# 1. Locate current script directory (e.g., Experiment 07)
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 2. 定位项目根目录 (向上跳一级)
+# 2. Locate project root directory (go up one level)
 project_root = os.path.dirname(current_dir)
 
-# 3. 构建输入与输出的完整路径
+# 3. Construct full path for input and output
 input_file = os.path.join(project_root, "data_input", "metabolism.csv")
 
-data =pd.read_csv(input_file) #读取数据文件，将本行代码补充完整
-x1 =data.iloc[0:12,1] #获取前12行横纵坐标数据，将本行代码补充完整
-y1 =data.iloc[0:12,0] #获取前1行纵坐标数据，将本行代码补充完整
-x2 =data.tail(8)["weight"] #获取后8行横坐标数据，将本行代码补充完整
-y2 =data.tail(8)["BM"] #获取后8行纵坐标数据，将本行代码补充完整
+data =pd.read_csv(input_file) # Read data file, complete this line
+x1 =data.iloc[0:12,1] # Get first 12 rows x-y coordinate data, complete this line
+y1 =data.iloc[0:12,0] # Get first 12 rows y coordinate data, complete this line
+x2 =data.tail(8)["weight"] # Get last 8 rows x coordinate data, complete this line
+y2 =data.tail(8)["BM"] # Get last 8 rows y coordinate data, complete this line
 
-plt.scatter(x1,y1,c="red",s=50,marker="D") #调用函数绘制前12行数据散点图，将本行代码补充完整
-plt.scatter(x2,y2,c="blue",s=100,marker="p") #调用函数绘制前8行数据散点图，将本行代码补充完整
+plt.scatter(x1,y1,c="red",s=50,marker="D") # Call function to plot scatter for first 12 rows, complete this line
+plt.scatter(x2,y2,c="blue",s=100,marker="p") # Call function to plot scatter for first 8 rows, complete this line
 
-plt.savefig("j.png") #保存图形，将本行代码补充完整
-plt.show() #显示图形，将本行代码补充完整
+plt.savefig("j.png") # Save figure, complete this line
+plt.show() # Display figure, complete this line

@@ -5,4 +5,4 @@ for i in range (1,100):
         s=s+0
     else:
         s=s+1/i
-print("计算结果是{}".format(s))
+print("Calculation result: {}".format(s))

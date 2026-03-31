@@ -1,6 +1,6 @@
-a=30-3**2+8//3%2*10
-print("第1个算数表达式的结果是",a)
-b=9*4**2/8%5
-print("第2个算数表达式的结果是",b)
-c=2**2**3
-print("第3个算数表达式的结果是",c)
+a = 30 - 3**2 + 8//3 % 2 * 10
+print("Result of expression 1:", a)
+b = 9 * 4**2 / 8 % 5
+print("Result of expression 2:", b)
+c = 2**2**3
+print("Result of expression 3:", c)

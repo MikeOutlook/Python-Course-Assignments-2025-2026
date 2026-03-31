@@ -1,5 +1,5 @@
-starlist=["一星","二星","三星"]
-score=int(input("请输入员工评分："))
+starlist=["One star","Two stars","Three stars"]
+score=int(input("Enter employee rating: "))
 star=score//10
 level=starlist[star]
-print("该员工得分为{0}，等级为{1}".format(score,level))
+print("Employee score: {0}, Rating: {1}".format(score,level))

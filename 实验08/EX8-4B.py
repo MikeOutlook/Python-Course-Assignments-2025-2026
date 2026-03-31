@@ -1,33 +1,33 @@
-# 步骤1：导入需要的库
+# Step 1: Import required libraries
 import os
-import pandas as pd  #导入pandas，将本行代码补充完整
-import matplotlib.pyplot as plt   #导入绘图库，将本行代码补充完整
-# 步骤2：全局设置
+import pandas as pd # Import pandas, complete this line
+import matplotlib.pyplot as plt   # Import plotting library, complete this line
+# Step 2: Global settings
 
-#中文显示设置，将本行代码补充完整
+# Chinese display setting, complete this line
 plt.rcParams["font.family"] = ["SimHei"]
 
-# 步骤3：数据准备
+# Step 3: Data preparation
 
-# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+# 1. Locate current script directory (e.g., Experiment 07)
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 2. 定位项目根目录 (向上跳一级)
+# 2. Locate project root directory (go up one level)
 project_root = os.path.dirname(current_dir)
 
-# 3. 构建输入与输出的完整路径
+# 3. Construct full path for input and output
 input_file = os.path.join(project_root, "data_input", "AIDS_data.csv")
 
-datas = pd.read_csv(input_file,encoding="GBK") #读取数据文件到datas数据框
-y1 =datas["发病数"].values #取出"发病数"列数据，将本行代码补充完整
-y2 =datas["既往感染者转为病人"].values #取出"既往感染者转为病人"列数据，将本行代码补充完整
-y3 =datas["死亡数"].values #取出"死亡数"列数据，将本行代码补充完整
-x =list(range(6)) #产生横坐标数据，将本行代码补充完整
-#5、调用函数绘图
+datas = pd.read_csv(input_file,encoding="GBK") # Read data file to datas dataframe
+y1 =datas["发病数"].values # Extract "发病数" column data, complete this line
+y2 =datas["既往感染者转为病人"].values # Extract "既往感染者转为病人" column data, complete this line
+y3 =datas["死亡数"].values # Extract "死亡数" column data, complete this line
+x =list(range(6)) # Generate x-axis data, complete this line
+# 5: Call function to plot
 plt.figure(figsize=(9,7))
-plt.plot(x,y1,"r-s") #绘制第1条线，将本行代码补充完整
-plt.plot(x,y2,"b-o") #绘制第2条线，将本行代码补充完整
-plt.plot(x,y3,"m:D") #绘制第3条线，将本行代码补充完整
-#7、图形展示
+plt.plot(x,y1,"r-s") # Plot first line, complete this line
+plt.plot(x,y2,"b-o") # Plot second line, complete this line
+plt.plot(x,y3,"m:D") # Plot third line, complete this line
+# 7: Display graph
 
 plt.show()

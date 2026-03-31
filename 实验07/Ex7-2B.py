@@ -1,25 +1,25 @@
 import os
 import pandas as pd
-#下行代码为东亚文字显示对齐设置
-pd.set_option("display.unicode.east_asian_width", True) 
+# Below code is for East Asian text display alignment
+pd.set_option("display.unicode.east_asian_width", True)
 
-##1. 定位当前脚本所在文件夹 (e.g., 实验07)
+##1. Locate current script directory (e.g., Experiment 07)
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-## 2. 定位项目根目录 (向上跳一级)
+## 2. Locate project root directory (go up one level)
 project_root = os.path.dirname(current_dir)
 
-## 3. 构建输入与输出的完整路径
+## 3. Construct full path for input and output
 birthwt = os.path.join(project_root, "data_input", "score.csv")
 
-DF_score = pd.read_csv(birthwt,index_col=0) # (1) 读取数据文件
-print("原始数据：\n",DF_score)
+DF_score = pd.read_csv(birthwt,index_col=0) # (1) Read data file
+print("Original data:\n",DF_score)
 
-DF_score.drop(index="赵云",inplace=True) #删除某行数据，将本行代码补充完整
-DF_score.loc["吕布"]=[52,63,64,55,53] #追加一行数据，将本行代码补充完整
-newScore = ["良","中","差","优","优","良","优","中","优"]
-DF_score.insert(3,'体育',newScore)  #插入新列，新列数据为newScore列表，将本行代码补充完整
-print("修改后数据：\n", DF_score)
+DF_score.drop(index="Zhao Yun",inplace=True) # Delete a row, complete this line
+DF_score.loc["Lu Bu"]=[52,63,64,55,53] # Add a row, complete this line
+newScore = ["Good","Medium","Poor","Excellent","Excellent","Good","Excellent","Medium","Excellent"]
+DF_score.insert(3,'PE',newScore)  # Insert new column, new column data is newScore list, complete this line
+print("Modified data:\n", DF_score)
 
-DFnew =DF_score.query("数学>90 and 体育!='差'")  #筛选出需要的数据，将本行代码补充完整
+DFnew =DF_score.query("Math>90 and PE!='Poor'")  # Filter required data, complete this line
 print(DFnew)

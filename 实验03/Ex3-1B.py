@@ -1,5 +1,5 @@
-res = input("请输入皮试结果：")
-if res == "阴性":
-    print("可以使用青霉素")
-elif res == "阳性":
-    print("更换其他抗生素")
+res = input("Enter skin test result: ")
+if res == "negative" or res == "Negative":
+    print("Penicillin can be used")
+elif res == "positive" or res == "Positive":
+    print("Switch to other antibiotics")

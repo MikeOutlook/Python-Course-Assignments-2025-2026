@@ -1,21 +1,19 @@
-# 创建药材列表，将下行代码补充完整
-herbs_list =["地塞米松","氨茶碱","洛贝林","溴己新","右美沙星"]
-# 创建药材库存量列表，将下行代码补充完整
+# Create herb list, complete the following line
+herbs_list =["Dexamethasone","Aminophylline","Lobelin","Bromhexine","Dextromethorphan"]
+# Create herb stock list, complete the following line
 stock_list =[30,40,33,34,28]
-# 获取用户输入的编号, 将编号转换为整数型，将下行代码补充完整
-num =int(input("请输入需要使用的药品编号："))
-# 从药材列表中取出需要的药材名称，将下行代码补充完整
+# Get user input for number, convert to integer, complete the following line
+num =int(input("Enter the drug number to use: "))
+# Get herb name from list, complete the following line
 user_herbs =herbs_list[num-1]
-# 获取用户输入的药材数量，将数字转换为整数型，将下行代码补充完整
-quantity =int(input("请输入需要的数量："))
-if quantity>stock_list[num-1]:# 如果库存不足，显示“库存不足！”
-    print("库存不足！")
+# Get user input for quantity, convert to integer, complete the following line
+quantity =int(input("Enter the quantity needed: "))
+if quantity>stock_list[num-1]: # If stock is insufficient, display "Insufficient stock!"
+    print("Insufficient stock!")
 else:
-    print("库存满足需求！")# 否则，取出需要的数量。将后续分支结构的代码补充完整
+    print("Stock meets demand!") # Otherwise, take the required quantity. Complete the following branch structure code
 
 
 
-
-# 显示所需药材的现有库存，将下行代码补充完整
+# Display current stock of required herbs, complete the following line
 print()
-

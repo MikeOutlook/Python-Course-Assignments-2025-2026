@@ -1,6 +1,6 @@
-name= input("请输入姓名")
-greet=name+"你好"
+name = input("Enter your name: ")
+greet = name + " Hello"
 
-print(greet+"\n今天是我们的第一次实验课")
+print(greet + "\nToday is our first lab session")
 
-#print(input("请输入姓名") + "你好\n今天是我们的第一次实验课")
+#print(input("Enter your name: ") + " Hello\nToday is our first lab session")

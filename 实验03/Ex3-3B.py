@@ -1,13 +1,13 @@
-hb=int(input("请输入血红蛋白值："))
+hb=int(input("Enter hemoglobin value: "))
 if hb >165:
-    print("血红蛋白增多")
+    print("Hemoglobin elevated")
 elif hb >120:
-    print("血红蛋白正常")
+    print("Hemoglobin normal")
 elif hb >91:
-    print("轻度贫血")
+    print("Mild anemia")
 elif hb >61:
-    print("中度贫血")
+    print("Moderate anemia")
 elif hb >30:
-    print("重度贫血")
+    print("Severe anemia")
 else:
-    print("极度贫血")
+    print("Extreme anemia")

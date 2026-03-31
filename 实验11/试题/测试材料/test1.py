@@ -1,11 +1,11 @@
 #
-#我的学号：private
-#我的姓名：2023220986
+# My Student ID: private
+# My Name: 2023220986
 import numpy as np
-arr1 =np.arange(10,1200,7)   # 1.创建第1个数组,将本行代码补充完整
-arr2 =arr1[arr1%3==0]   # 2.使用布尔索引生成第2个数组,将本行代码补充完整
-arr3 =arr2.reshape(-1,8)   # 3.转换为第3个数组,将本行代码补充完整
-print("arr3的元素个数",arr3.size)  # 4.显示元素个数,将括号内代码补充完整
-arr3[:,0]=(arr3[:,-1]+arr3[:,-2])**0.5   # 5.计算,将赋值号左侧方括号内和右侧代码补充完整
-result1 =arr3[2:6,0:3]   # 6.切片,将本行代码补充完整
-print("result1数组如下\n",result1)
+arr1 =np.arange(10,1200,7)   # 1. Create first array, complete this line
+arr2 =arr1[arr1%3==0]   # 2. Use boolean index to generate second array, complete this line
+arr3 =arr2.reshape(-1,8)   # 3. Convert to third array, complete this line
+print("Number of elements in arr3:",arr3.size)  # 4. Display element count, complete code inside parentheses
+arr3[:,0]=(arr3[:,-1]+arr3[:,-2])**0.5   # 5. Calculate, complete code inside left brackets and right side
+result1 =arr3[2:6,0:3]   # 6. Slice, complete this line
+print("result1 array is as follows:\n",result1)

@@ -1,5 +1,5 @@
-temp=float(input("请输入患者体温（摄氏度）"))
+temp=float(input("Enter patient temperature (Celsius): "))
 if temp >=37.3:
-    print("患者发热")
+    print("Patient has fever")
 else:
-    print("体温正常")
+    print("Temperature normal")

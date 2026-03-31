@@ -1,26 +1,26 @@
-#1.导入需要的库，补充完整后续两行代码
+#1. Import required libraries, complete the next two lines
 import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-#2.中文字体显示修正，在下面填写正确的代码
+#2. Chinese font display correction, fill in the correct code below
 plt.rcParams['font.family'] = ['SimHei']
 
-# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+# 1. Locate current script directory (e.g., Experiment 07)
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 2. 定位项目根目录 (向上跳一级)
+# 2. Locate project root directory (go up one level)
 project_root = os.path.dirname(current_dir)
 
-# 3. 构建输入与输出的完整路径
+# 3. Construct full path for input and output
 input_file = os.path.join(project_root, "data_input", "hospital.csv")
 
-#3.产生横纵坐标数据
-DF_hospital =pd.read_csv(input_file)       #读取数据文件到DF_hospital数据框，将本行代码补充完整
-data_ratio =DF_hospital["Tertiary"]/DF_hospital["Total"]  #计算比率，将本行代码补充完整
-x= np.arange(0,data_ratio.size)          #产生0到4的横坐标数据，将本行代码补充完整
-barLabel = ["广东", "江苏", "山东","浙江", "河南"]
-#4.调用函数绘制柱形图，补充完整后续代码
+#3. Generate x and y coordinate data
+DF_hospital =pd.read_csv(input_file)       # Read data file to DF_hospital dataframe, complete this line
+data_ratio =DF_hospital["Tertiary"]/DF_hospital["Total"]  # Calculate ratio, complete this line
+x= np.arange(0,data_ratio.size)          # Generate x-axis data from 0 to 4, complete this line
+barLabel = ["Guangdong", "Jiangsu", "Shandong","Zhejiang", "Henan"]
+#4. Call function to draw bar chart, complete subsequent code
 plt.bar(x, data_ratio, tick_label=barLabel,color="orange",width=0.6,edgecolor="b")
-#5.图形展示
+#5. Display graph
 plt.show()

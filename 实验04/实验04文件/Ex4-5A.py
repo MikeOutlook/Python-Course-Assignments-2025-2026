@@ -1,10 +1,10 @@
 import random
-# 随机产生[0,1) 之间的小数
+# Generate random float in [0,1)
 print(random.random())
-# 随机产生[1,10] 间的整数
+# Generate random integer in [1,10]
 print(random.randint(1,10))
-# 随机产生[4.3, 9.1] 之间的小数
+# Generate random float in [4.3, 9.1]
 print(random.uniform(4.3, 9.1))
-# 从列表 list1 中随机抽取一个元素
+# Randomly select one element from list list1
 list1 = [11,26,35,42,50]
 print(random.choice(list1))

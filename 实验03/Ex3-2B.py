@@ -1,6 +1,6 @@
-wea=input("请输入今天天气：")
-pm=int(input("请输入今天的PM2.5值："))
-if wea!="雨" and pm<75:
-    print("进行户外运动")
+wea=input("Enter today's weather: ")
+pm=int(input("Enter today's PM2.5 value: "))
+if wea!="rain" and pm<75:
+    print("Go outdoor for exercise")
 else:
-    print("去图书馆学习")
+    print("Go to library to study")

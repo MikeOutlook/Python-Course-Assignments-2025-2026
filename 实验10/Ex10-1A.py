@@ -1,49 +1,49 @@
-# 导入模块
+# Import modules
 import os
 import pandas as pd
 import matplotlib.pylab as plt
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
-# 加载数据， 文件类型为 xls；
+# Load data, file type is xls
 
-# 1. 定位当前脚本所在文件夹 (e.g., 实验07)
+# 1. Locate current script directory (e.g., Experiment 07)
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 2. 定位项目根目录 (向上跳一级)
+# 2. Locate project root directory (go up one level)
 project_root = os.path.dirname(current_dir)
 
-# 3. 构建输入与输出的完整路径
+# 3. Construct full path for input and output
 input_file = os.path.join(project_root, "data_input", "time_cholesterol.xls")
 
 data = pd.read_excel(input_file)
-print(data) #非必须代码， 观察数据结构
-#读取样本（自变量） 和标签（因变量）
+print(data) # Optional code, to observe data structure
+# Read samples (independent variables) and labels (dependent variables)
 x=data["time"].values.reshape(-1,1)
 y=data["cholesterol"].values.reshape(-1,1)
-# 随机划分训练集和测试集， 其中测试集占 30%
+# Randomly split training set and test set, test set is 30%
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
-# 建立线性模型；
+# Build linear model
 regr = linear_model.LinearRegression()
-# 利用训练集训练模型；
+# Train model using training set
 regr.fit(x_train, y_train)
-# 显示线性函数的回归系数与截距
+# Display linear function regression coefficients and intercept
 a = regr.intercept_
 b = regr.coef_
 print("Coefficients: \n", b)
 print("Intercept:\n", a)
-# 获取测试集自变量的预测数据
+# Get predicted data for test set independent variables
 y_pred = regr.predict(x_test)
-# 显示均方误差
-print("均方误差:", mean_squared_error(y_test, y_pred))
-# 显示决定系数
-print("决定系数: ", r2_score(y_test, y_pred))
-# 绘制训练好的线性回归拟合直线；
+# Display mean squared error
+print("Mean Squared Error:", mean_squared_error(y_test, y_pred))
+# Display coefficient of determination
+print("R2 Score: ", r2_score(y_test, y_pred))
+# Draw trained linear regression fitting line
 plt.title("LinearRegression time-choles")
 plt.xlabel("time")
 plt.ylabel("choles")
 plt.scatter(x_test, y_test, color="black")
 plt.plot(x_test, y_pred, color="red", linewidth=3)
 plt.show()
-# 显示回归方程
+# Display regression equation
 print("choles= {}+ {}* time".format(a, b))
