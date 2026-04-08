@@ -72,7 +72,7 @@ Data files are located in the `data_input` directory, including:
 
 ```bash
 # Clone project
-git clone https://github.com/yourusername/Python-Course-Assignments-2025-2026.git
+git clone https://github.com/MikeOutlook/Python-Course-Assignments-2025-2026.git
 
 # Install dependencies
 pip install -r requirements.txt
